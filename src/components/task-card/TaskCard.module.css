@@ -1,0 +1,76 @@
+.task {
+    padding: 10px 15px;
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    gap: 15px;
+    border-radius: 10px;
+    transition: box-shadow 250ms ease;
+}
+
+.task:hover {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.high {
+    background-color: rgb(245, 200, 225);
+}
+
+.medium {
+    background-color: rgb(255, 225, 200);
+}
+
+.low {
+    background-color: rgb(200, 235, 255);
+}
+
+.none {
+    background-color: rgb(245, 245, 245);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 550;
+}
+
+.alert {
+    color: rgb(225, 45, 45);
+}
+
+.fire {
+    color: rgb(245, 125, 45);
+}
+
+.snow {
+    color: rgb(45, 185, 245);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.person {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.due-date {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.calendar {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}

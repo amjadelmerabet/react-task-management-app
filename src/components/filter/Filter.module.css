@@ -1,0 +1,67 @@
+.filter {
+    display: flex;
+    padding: 10px 25px;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+.item {
+    margin-inline: 5px;
+    padding: 0;
+}
+
+.button {
+    padding: 2px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+}
+
+.button:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.all,
+.none {
+    background-color: rgb(200, 200, 200);
+}
+
+.all:hover,
+.none:hover {
+    background: transparent;
+}
+
+.high {
+    background-color: rgb(255, 200, 225);
+    color: darkred;
+}
+
+.high:hover {
+    background-color: rgb(240, 190, 210);
+}
+
+.medium {
+    background-color: rgb(255, 235, 200);
+    color: rgb(200, 85, 45);
+}
+
+.medium:hover {
+    background-color: rgb(245, 220, 185);
+}
+
+.low {
+    background-color: rgb(200, 230, 245);
+}
+
+.low:hover {
+    background-color: rgb(190, 215, 235);
+}

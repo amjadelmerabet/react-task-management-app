@@ -1,0 +1,13 @@
+.App {
+	font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+	width: 80%;
+	margin-inline: auto;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
