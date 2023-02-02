@@ -10,4 +10,6 @@
 nav {
 	display: flex;
 	justify-content: space-between;
+	background-color: rgb(225, 235, 245);
+	margin-top: 10px;
 }

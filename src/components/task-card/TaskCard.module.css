@@ -4,7 +4,11 @@
     display: grid;
     gap: 15px;
     border-radius: 10px;
-    transition: box-shadow 250ms ease;
+    transition: box-shadow 250ms ease, background-color 250ms ease;
+}
+
+.list-view {
+    gap: 5px;
 }
 
 .task:hover {
@@ -12,24 +16,54 @@
 }
 
 .high {
-    background-color: rgb(245, 200, 225);
+    background-color: var(--high-priority-bg);
+}
+
+.high:hover {
+    background-color: var(--high-priority-hover-bg);
 }
 
 .medium {
-    background-color: rgb(255, 225, 200);
+    background-color: var(--medium-priority-bg);
+}
+
+.medium:hover {
+    background-color: var(--medium-priority-hover-bg);
 }
 
 .low {
-    background-color: rgb(200, 235, 255);
+    background-color: var(--low-priority-bg);
+}
+
+.low:hover {
+    background-color: var(--low-priority-hover-bg);
 }
 
 .none {
-    background-color: rgb(245, 245, 245);
+    background-color: var(--no-priority-bg);
+}
+
+.none:hover {
+    background-color: var(--no-priority-hover-bg);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    gap: 5px;
+}
+
+.right {
+    gap: 15px;
 }
 
 .title {
