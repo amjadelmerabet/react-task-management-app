@@ -1,5 +1,5 @@
 import { Task } from "../../../App";
-import TaskCard from "../../task-card/TaskCard";
+import { returnTask } from "../../../App";
 
 import listViewCSS from "./ListView.module.css";
 
@@ -10,39 +10,17 @@ type ListViewPropsData = {
     };
 };
 
+const LIST_VIEW = "list";
+
 function ListView(props: ListViewPropsData) {
     return (
         <div className={listViewCSS.list}>
             {props.data.tasks.map((task) => {
                 if (props.data.priority === "all") {
-                    return (
-                        <TaskCard
-                            key={task.id}
-                            data={{
-                                id: task.id,
-                                title: task.title,
-                                priority: task.priority,
-                                description: task.description,
-                                author: task.author,
-                                dueDate: task.dueDate,
-                            }}
-                        />
-                    );
+                    return returnTask(task, LIST_VIEW);
                 } else {
                     if (task.priority === props.data.priority) {
-                        return (
-                            <TaskCard
-                                key={task.id}
-                                data={{
-                                    id: task.id,
-                                    title: task.title,
-                                    priority: task.priority,
-                                    description: task.description,
-                                    author: task.author,
-                                    dueDate: task.dueDate,
-                                }}
-                            />
-                        );
+                        return returnTask(task, LIST_VIEW);
                     }
                 }
             })}
