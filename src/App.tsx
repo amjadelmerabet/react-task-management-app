@@ -72,8 +72,11 @@ function App() {
                     <ListView
                         data={{ tasks: Data.tasks, priority: priority }}
                     />
-                ) : <GroupView data={{ tasks: Data.tasks, priority: priority }} />
-                }
+                ) : (
+                    <GroupView
+                        data={{ tasks: Data.tasks, priority: priority }}
+                    />
+                )}
             </div>
         </div>
     );

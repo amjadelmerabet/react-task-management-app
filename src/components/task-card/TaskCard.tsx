@@ -115,7 +115,7 @@ function TaskCard(props: TaskPropsData) {
                 <div className={taskCardCSS.footer}></div>
             </div>
         );
-    } 
+    }
     if (props.data.view === "group") {
         return (
             <div
