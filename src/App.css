@@ -1,15 +1,15 @@
 .App {
-	font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
-	width: 80%;
-	margin-inline: auto;
+    width: 80%;
+    margin-inline: auto;
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	background-color: rgb(225, 235, 245);
-	margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(225, 235, 245);
+    margin-top: 10px;
 }

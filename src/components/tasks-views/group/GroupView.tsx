@@ -41,8 +41,10 @@ function returnGroup(priorityGroup: string, index: number, tasks: Task[]) {
                                 [groupViewCSS.icon]: true,
                             })}
                         />
-                    ) : <AiOutlineWarning className={groupViewCSS.icon} />}
-                    {priorityGroup}
+                    ) : (
+                        <AiOutlineWarning className={groupViewCSS.icon} />
+                    )}
+                    <span className={groupViewCSS["group-title"]}>{priorityGroup}</span>
                 </h2>
             </div>
             <div className={groupViewCSS.tasks}>

@@ -39,21 +39,20 @@ export function returnTask(task: Task, view: string) {
 }
 
 function App() {
-    const [priority, setPriority] = useState("all");
+    const [selectedPriority, setSelectedPriority] = useState("all");
     const [selectedView, setSelectedView] = useState("grid");
 
+    const priorityValues = ["All", "High", "Medium", "Low", "None"];
     const views = ["Grid", "List", "Group"];
-
-    const priorityFilterValues = ["All", "High", "Medium", "Low", "None"];
-
+    
     return (
         <div className="App">
             <div className="container">
                 <nav>
                     <Filter
                         data={{
-                            values: priorityFilterValues,
-                            setPriority: setPriority,
+                            priorityValues: priorityValues,
+                            setSelectedPriority: setSelectedPriority,
                         }}
                     />
                     <ViewSelector
@@ -66,14 +65,17 @@ function App() {
                 </nav>
                 {selectedView === "grid" ? (
                     <GridView
-                        data={{ tasks: Data.tasks, priority: priority }}
+                        data={{ tasks: Data.tasks, priority: selectedPriority }}
                     />
                 ) : selectedView === "list" ? (
                     <ListView
-                        data={{ tasks: Data.tasks, priority: priority }}
+                        data={{ tasks: Data.tasks, priority: selectedPriority }}
                     />
-                ) : <GroupView data={{ tasks: Data.tasks, priority: priority }} />
-                }
+                ) : (
+                    <GroupView
+                        data={{ tasks: Data.tasks, priority: selectedPriority }}
+                    />
+                )}
             </div>
         </div>
     );
