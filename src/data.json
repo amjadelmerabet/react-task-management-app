@@ -31,6 +31,14 @@
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi aut saepe delectus est sit totam veniam praesentium repellat, dolorem expedita maxime suscipit vitae dolorum, dolores sapiente velit consequatur enim. Accusantium tenetur eaque aut, iusto, ipsam animi necessitatibus deleniti assumenda vel ullam omnis praesentium ipsum aspernatur suscipit neque cupiditate totam id.",
             "author": "James",
             "dueDate": "10-02-2023"
+        },
+        {
+            "id": 4,
+            "title": "Task 5",
+            "priority": "high",
+            "description": "This is a task",
+            "author": "User 1",
+            "dueDate": "10-02-2023"
         }
     ]
 }

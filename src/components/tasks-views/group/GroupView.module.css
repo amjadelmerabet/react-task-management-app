@@ -7,18 +7,18 @@
 .header {
     padding: 5px 25px;
     background-color: rgb(245, 245, 245);
+    display: grid;
+    align-items: center;
 }
 
-.tasks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+h2 {
+    display: flex;
+    align-items: center;
 }
 
 .icon {
     margin-right: 10px;
+    font-size: 24px;
 }
 
 .alert {
@@ -31,4 +31,16 @@
 
 .snow {
     color: rgb(45, 185, 245);
+}
+
+.group-title {
+    color: darkblue;
+}
+
+.tasks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }

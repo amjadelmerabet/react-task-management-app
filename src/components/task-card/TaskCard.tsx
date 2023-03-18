@@ -20,6 +20,7 @@ const tasksBackgrounds = [
     taskCardCSS.none,
 ];
 
+// TODO: All the task cards should have the same size.
 function TaskCard(props: TaskPropsData) {
     const priority = props.data.task.priority;
     const taskBackground =
@@ -59,10 +60,15 @@ function TaskCard(props: TaskPropsData) {
                     </div>
                 </div>
                 <div className={taskCardCSS.content}>
-                    {props.data.task.description
-                        .split(" ")
-                        .splice(0, 25)
-                        .join(" ")}
+                    <div className={taskCardCSS.description}>
+                        {props.data.task.description
+                            .split(" ")
+                            .splice(0, 25)
+                            .join(" ") +
+                            (props.data.task.description.split(" ").length > 25
+                                ? " ..."
+                                : "")}
+                    </div>
                 </div>
                 <div className={taskCardCSS.footer}>
                     <div className={taskCardCSS.author}>
@@ -110,7 +116,10 @@ function TaskCard(props: TaskPropsData) {
                     {props.data.task.description
                         .split(" ")
                         .splice(0, 25)
-                        .join(" ")}
+                        .join(" ") +
+                        (props.data.task.description.split(" ").length > 25
+                            ? " ..."
+                            : "")}
                 </div>
                 <div className={taskCardCSS.footer}></div>
             </div>
@@ -136,7 +145,10 @@ function TaskCard(props: TaskPropsData) {
                     {props.data.task.description
                         .split(" ")
                         .splice(0, 25)
-                        .join(" ")}
+                        .join(" ") +
+                        (props.data.task.description.split(" ").length > 25
+                            ? " ..."
+                            : "")}
                 </div>
                 <div className={taskCardCSS.footer}>
                     <div className={taskCardCSS.author}>

@@ -5,8 +5,8 @@ import filterCSS from "./Filter.module.css";
 
 type FilterPropsData = {
     data: {
-        values: string[];
-        setPriority: React.Dispatch<React.SetStateAction<string>>;
+        priorityValues: string[];
+        setSelectedPriority: React.Dispatch<React.SetStateAction<string>>;
     };
 };
 
@@ -22,7 +22,7 @@ function Filter(props: FilterPropsData) {
     const [active, setActive] = useState("all");
 
     const handlePriority = (priority: string) => {
-        props.data.setPriority(priority);
+        props.data.setSelectedPriority(priority);
         setActive(priority);
     };
 
@@ -30,7 +30,7 @@ function Filter(props: FilterPropsData) {
         <div className={filterCSS.filter}>
             <span className={filterCSS.name}>Priority :</span>
             <ul className={filterCSS.list}>
-                {props.data.values.map((filterItem, index) => {
+                {props.data.priorityValues.map((priority, index) => {
                     return (
                         <li key={index} className={filterCSS.item}>
                             <input
@@ -38,11 +38,11 @@ function Filter(props: FilterPropsData) {
                                 className={classNames({
                                     [filterCSS.button]: true,
                                     [priorityCSS[index]]:
-                                        active === filterItem.toLowerCase()
+                                        active === priority.toLowerCase()
                                             ? true
                                             : false,
                                 })}
-                                value={filterItem}
+                                value={priority}
                                 onClick={(event) =>
                                     handlePriority(
                                         event.currentTarget.value.toLowerCase()
